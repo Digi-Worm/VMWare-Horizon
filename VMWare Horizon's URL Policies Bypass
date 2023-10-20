@@ -10,7 +10,7 @@ Imagine this URL:
 plaintext
 Copy code
 https://blacklisteddomain.com/?search=whitelisteddomain.com
-By slipping ?search=whitelisteddomain.com into the URL, the security system is fooled. It thinks it's just an innocent search query, but in reality, we've just bypassed the blacklist.
+By slipping ?search=whitelisteddomain.com into the URL, the security system is fooled. It thinks it's just an query containing whitelisted domain, but in reality, we've just bypassed the blacklist.
 
 Impact:
 The impact of this exploit is astounding. It allows hackers to infiltrate systems using trusted domains, opening doors to data theft, phishing, malware injection, and more, all under the guise of seemingly benign URLs.
