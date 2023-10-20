@@ -10,4 +10,6 @@ VMware clients offer a robust and dynamic security solution for enterprises seek
 
 3) Sensitive Data Exfiltration: These vulnerabilities empower attackers to exfiltrate sensitive information without elevating their privileges, raising concerns about data protection.
 
+4) VDI Command/Powershell Execution Bypass: The discovery of a bypass that enables execution of VDI commands and PowerShell scripts without the usual restrictions is a major security concern. Malicious actors could exploit this vulnerability to perform unauthorized actions within the VDI environment.
+
 These discoveries underscore the need for VMware to enhance its research efforts and refine its security policies. This, in turn, would empower clients to enforce robust security measures for the protection of their critical data.
