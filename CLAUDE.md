@@ -1,4 +1,4 @@
-# CLAUDE.md - VMWare-Horizon Repository Guide
+# VMWare-Horizon Repository Guide
 
 ## Project Overview
 
@@ -14,7 +14,7 @@ This is a **security research and vulnerability documentation repository** focus
 
 ```
 VMWare-Horizon/
-├── CLAUDE.md                        # This file - repository guide
+├── (this file)                      # Repository guide
 ├── README.md                        # Project overview and vulnerability summary
 ├── Command-Powershell Execution Bypass          # Vulnerability 4: VBA exploit + documentation
 ├── VMWare Horizon's URL Policies Bypass         # Vulnerability 2: URL parameter bypass docs
