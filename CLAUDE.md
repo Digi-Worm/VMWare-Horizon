@@ -1,4 +1,4 @@
-# CLAUDE.md - AI Assistant Guide for VMWare-Horizon Repository
+# CLAUDE.md - VMWare-Horizon Repository Guide
 
 ## Project Overview
 
@@ -6,7 +6,7 @@ This is a **security research and vulnerability documentation repository** focus
 
 **Purpose:** Educational security research and responsible vulnerability disclosure.
 
-**Important:** This repository exists for defensive security awareness. AI assistants must **never** enhance, improve, or augment the exploit code. Analysis, documentation, and reporting on existing code is acceptable.
+**Important:** This repository exists for defensive security awareness. Exploit code must **never** be enhanced, improved, or augmented. Analysis, documentation, and reporting on existing code is acceptable.
 
 ---
 
@@ -14,7 +14,7 @@ This is a **security research and vulnerability documentation repository** focus
 
 ```
 VMWare-Horizon/
-├── CLAUDE.md                        # This file - AI assistant guide
+├── CLAUDE.md                        # This file - repository guide
 ├── README.md                        # Project overview and vulnerability summary
 ├── Command-Powershell Execution Bypass          # Vulnerability 4: VBA exploit + documentation
 ├── VMWare Horizon's URL Policies Bypass         # Vulnerability 2: URL parameter bypass docs
@@ -88,21 +88,21 @@ There is no build process, linting, or automated testing. Changes are purely doc
 
 ---
 
-## AI Assistant Guidelines
+## Contribution Guidelines
 
-### DO
+### Acceptable Changes
 - Analyze and explain existing exploit code and vulnerability documentation
-- Help improve documentation quality (grammar, formatting, structure)
+- Improve documentation quality (grammar, formatting, structure)
 - Add new vulnerability write-ups following the existing document structure
 - Suggest remediation strategies and defensive measures
 - Create summaries, reports, or comparisons of the documented vulnerabilities
-- Help organize the repository (file structure, README improvements)
+- Organize the repository (file structure, README improvements)
 
-### DO NOT
-- Enhance, improve, or augment exploit code to be more effective
-- Create new exploit code or attack tools
-- Remove educational disclaimers or responsible-use notices
-- Provide step-by-step attack instructions beyond what is already documented
+### Not Acceptable
+- Enhancing, improving, or augmenting exploit code to be more effective
+- Creating new exploit code or attack tools
+- Removing educational disclaimers or responsible-use notices
+- Providing step-by-step attack instructions beyond what is already documented
 
 ### When Editing Documentation
 - Preserve the existing section structure (Description, Payload, Impact, Remediation)
@@ -112,7 +112,7 @@ There is no build process, linting, or automated testing. Changes are purely doc
 
 ---
 
-## Key Context for AI Assistants
+## Key Context
 
 1. **This is a documentation repo, not a software project.** There are no dependencies to install, no builds to run, and no tests to execute.
 2. **File names contain spaces.** Always quote file paths when using shell commands.
